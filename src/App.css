@@ -1,0 +1,141 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  background-color: #444;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Container - Center content vertically and horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Task box */
+.task-box {
+  width: 25rem;
+  padding: 2rem;
+  background-color: #555;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Title styling */
+.title {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Input box */
+.input-box {
+  width: 80%;
+  height: 40px;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+/* Input box focus effect */
+.input-box:focus {
+  border: 1px solid #0099ff;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+}
+
+/* Add button */
+.add-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Add button hover effect */
+.add-btn:hover {
+  background-color: #005cbf;
+  transform: scale(1.05);
+}
+
+/* Add button active state */
+.add-btn:active {
+  box-shadow: none;
+}
+
+/* List task */
+.list-task {
+  border: 2px solid rgb(161, 158, 158);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 10px;
+  height: auto;
+  background-color: #555;
+  transition: background-color 0.2s ease;
+}
+
+/* List task hover effect */
+.list-task:hover {
+  background-color: #666;
+}
+
+/* Delete button (trash icon) */
+.delete-btn {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+/* Delete button hover effect */
+.delete-btn:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .task-box {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .input-box {
+    width: 70%;
+  }
+}
